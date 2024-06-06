@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoBigData Logo Generator</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
+    <script src="https://opentype.js.org/dist/opentype.js"></script>
+    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" />-->
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>SoBigData Logo Generator</h1>
+        <h2>A tool to generate and download the SoBigData logo variants</h2>
+    </header>
+    <nav>
+        <!-- Navigation links go here -->
+        <div>
+            <h2>Instructions</h2>
+            <div class="instruction-section">
+                <label for="node-select">1. Select a Logo</label>
+                <select id="node-select"></select>
+            </div>
+            <div class="instruction-section">
+                <p>2. Select your preferred size</p>
+                <input type="range"
+                       id="sideLength-slider"
+                       min="40"
+                       max="180"
+                       step="10"
+                       value="80">
+                <label for="sideLength-slider">width: 448 px, height: 80 px</label>
+            </div>
+            <div class="instruction-section">
+                <p>3. Select a color variant</p>
+                <button id="change-color">Black</button>
+                <button id="change-color-white">White</button>
+            </div>
+            <p>4. Download your logo</p>
+            <div class="button-container">
+
+                <div id="downlaod"></div>
+                <div id="downlaod2"></div>
+            </div>
+            <div class="note">
+                * To visualize and use the SVG file on your computer, remember to install the <a href="https://fonts.google.com/specimen/Rajdhani" target="_blank">font family "Rajdhani"</a>.
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <!-- Main content goes here -->
+        <div id="chart">
+        </div>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+        The Logo generator is a tool developed by the <a href="http://sobigdata.eu/" target="_blank">SoBigData Research Infrastructure</a> <br> The Logo programming is made by
+        <a href="https://kdd.isti.cnr.it/people/fadda-daniele" target="_blank">Daniele Fadda</a> and <a href="https://kdd.isti.cnr.it/people/rinzivillo-salvatore" target="_blank">Salvatore Rinzivillo</a>
+    </footer>
+</div>
+<script>
+    d3.json("data/sbd-nodes.json").then(function (data) {
+        console.log(data);
+        return d3.select("#node-select")
+            .attr("class", "select")
+            .selectAll("option")
+            .data(data, function (d) {
+                return d.Node;
+            })
+            .enter()
+            .append("option")
+            .attr("value", d => d.CODE)
+            .text(d => d.Node);
+    });
+</script>
+
+<script src="update_logo.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Rajdhani-Bold';
+    src: url('fonts/Rajdhani-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rajdhani-Medium';
+    src: url('fonts/Rajdhani-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rajdhani-SemiBold';
+    src: url('fonts/Rajdhani-SemiBold.ttf') format('truetype');
+}
+body {
+    font-family: 'Rajdhani-Medium', sans-serif;
+}
+
+h1 {
+    font-family: 'Rajdhani-Medium', sans-serif;
+    font-size: 50px;
+    margin-bottom: 0;
+    color: #273580;
+}
+h2 {
+    font-family: 'Rajdhani-Medium', sans-serif;
+    font-size:21px;
+    margin-top: 0;
+    color: #E83947;
+}
+h3  {
+    color: #273580;
+}
+
+p {
+    font-family: 'Rajdhani-Medium', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "nav header"
+        "nav main"
+        "nav footer";
+    gap: 0;
+    margin: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: #273580;
+    padding: 20px;
+}
+header h1 {
+    font-family: 'Rajdhani-Medium', sans-serif;
+    font-size: 50px;
+    margin-bottom: 0;
+    color: white;
+    margin-top:18px;
+}
+
+header h2 {
+    font-family: 'Rajdhani-Medium', sans-serif;
+    font-size:21px;
+    margin-top: 0;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #ddd ;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    overflow: hidden;
+    border-right: 1px solid black;
+    border-top:1px solid #fff;
+    botder-bottom: 1px solid #fff;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #273580;
+    color: white;
+    padding: 20px;
+}
+footer a {
+    color:white;
+}
+
+.instruction-section {
+    border-bottom: 1px solid #273580;
+    padding-bottom: 20px;
+}
+#sideLength-slider,
+label[for="sideLength-slider"] {
+    display: block;
+    margin-top: 10px;
+}
+#node-select {
+    width: 100%;
+    padding: 10px; /* Adjust this value as needed */
+    font-size: 16px;
+    font-weight: bold;
+}
+#node-select:focus {
+    outline:none;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: black;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #E83947;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #E83947;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: left
+}
+
+#change-color {
+    background-color: black;
+    color: white; /* This is to ensure the text is visible on the black background */
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#change-color-white {
+    background-color: white;
+    color: black; /* This is to ensure the text is visible on the white background */
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#chart {
+    display: block;
+    padding: 50px;
+}
+
+.note {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.note a {
+    color: #E83947;
+}
+
+#downlaod {
+    margin-right: 10px;
+}
