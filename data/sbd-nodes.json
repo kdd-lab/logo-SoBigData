@@ -3,6 +3,7 @@
   {"Node":"Summer School","label": "SUMMER SCHOOL","CODE":"SC","posX": 2,"posY": 2,"Responsible":"Roberto Trasarti","project":true,"suffix":""},
   {"Node":"CHALLENGE US 2024","label": "CHALLENGE US 2024","CODE":"CU24","posX": 2,"posY": 2,"Responsible":"Roberto Trasarti","project":true,"suffix":""},
   {"Node":"CHALLENGE US 2023","label": "CHALLENGE US 2023","CODE":"CU23","posX": 2,"posY": 2,"Responsible":"Roberto Trasarti","project":true,"suffix":""},
+  {"Node":"ACADEMY","label": "ACADEMY","CODE":"ACC","posX": 2,"posY": 2,"Responsible":"Sara Lelli","project":true,"suffix":""},
   {"Node":"DATA LITERACY","label": "DATA LITERACY","CODE":"LIT","posX": 2,"posY": 2,"Responsible":"Roberto Trasarti","project":true,"suffix":""},
   {"Node":"PlusPlus","label": "PLUS PLUS","CODE":"PLUS","posX": 0,"posY": 0,"Responsible":"Roberto Trasarti","project":true,"suffix":"++"},
   {"Node":"PPP","label": "PPP","CODE":"PPP","posX": 0,"posY": 4,"Responsible":"Roberto Trasarti","project":true,"suffix":"PPP"},
